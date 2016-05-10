@@ -14,7 +14,7 @@
 	"private": true,
 	"scripts": {
 	},
-    "engines": {
+	"engines": {
 		"vscode": "^1.0.0",
 		"node": "^4.1.1"
 	},
@@ -35,12 +35,12 @@
 			"label": "Ravi Debugger",
 			"enableBreakpointsFor": { "languageIds": ["lua"] },
 			"program": "./bin/ravidebug.exe",
-            "osx": {
-                "program": "/bin/ravidebug"
-            },
-            "linux": {
-                "program": "/bin/ravidebug"
-            },
+			"osx": {
+				"program": "/bin/ravidebug"
+			},
+			"linux": {
+				"program": "/bin/ravidebug"
+			},
 			"initialConfigurations":[
 				{
 					"name": "Ravi Debugger",
