@@ -1,8 +1,7 @@
 Ravi / Lua 5.3 Debug Adapter for VSCode
 =======================================
 
-The aim is to provide a debug adapter that allows Microsoft's Visual Studio Code to step through Ravi or 
-Lua code. 
+The aim is to provide a debug adapter that allows Microsoft's Visual Studio Code to step through [Ravi](http://ravilang.org) or [Lua 5.3](http://www.lua.org) code.
 
 Implementation Notes
 --------------------
@@ -31,7 +30,7 @@ Note: This is very early days and the debugger not yet ready for real use so try
 
 Installation
 ------------
-Todo
+The debug extension is available from the VSCode Marketplace - search for 'Ravi Debug'.
 
 Screenshots
 -----------
@@ -39,3 +38,4 @@ Todo
 
 See also
 --------
+[Ravi Programming Language](http://ravilang.org)
