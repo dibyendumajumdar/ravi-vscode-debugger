@@ -36,10 +36,10 @@
 			"enableBreakpointsFor": { "languageIds": ["lua"] },
 			"program": "./bin/ravidebug.exe",
 			"osx": {
-				"program": "/bin/ravidebug"
+				"program": "/bin/osx/ravidebug"
 			},
 			"linux": {
-				"program": "/bin/ravidebug"
+				"program": "/bin/linux/ravidebug"
 			},
 			"initialConfigurations":[
 				{
