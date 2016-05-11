@@ -16,7 +16,7 @@ This is work in progress. The basic debugger is working with following features 
 * Launch a Ravi/Lua program and stop on entry
 * Step through code (stepin, stepout, next all behave as stepin)
 * Continue works, but pause doesn't. Note that the execution is very slow under the debugger.
-* Set breakpoints at line/source level
+* Set breakpoints at line/source level 
 * Only local variables are shown in the Variables window right now; number of variables displayed is limited to 120.
 * Tables are expanded to one level only - expansion limited to 120 elements
 * Lua stdout and stderr are redirected to the debugger
@@ -30,7 +30,9 @@ Note: This is very early days and the debugger not yet ready for real use so try
 
 Installation
 ------------
-The debug extension is available from the VSCode Marketplace - search for 'Ravi Debug'.
+A prequisite on Mac OSX and Linux is an installation of Ravi. You need a NOJIT build that creates the 'ravidebug' executable. The 'ravidebug' executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it.
+
+You can install the Ravi Debug extension from VSCode Marketplace - just search for 'Ravi Debug'. 
 
 Screenshots
 -----------
