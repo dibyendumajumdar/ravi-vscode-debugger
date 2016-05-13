@@ -47,7 +47,10 @@
 					"type": "lua",
 					"request": "launch",
 					"program": "${workspaceRoot}/main.lua",
-					"stopOnEntry": true
+					"stopOnEntry": true,
+					"cwd": "${workspaceRoot}",
+					"LUA_PATH": "${workspaceRoot}/?.lua",
+					"LUA_CPATH": "${workspaceRoot}/?.dll"
 				}
 			],
 			"configurationAttributes": {
@@ -59,10 +62,25 @@
 							"description": "Lua 5.3 or Ravi program to debug - set this to the path of the script",
 							"default": "main.lua"
 						},
+						"cwd": {
+							"type": "string",
+							"description": "Working directory at program startup",
+							"default": "${workspaceRoot}"
+						},
 						"stopOnEntry": {
 							"type": "boolean",
 							"description": "Automatically stop after launch.",
 							"default": true
+						},
+						"LUA_PATH": {
+							"type": "string",
+							"description": "Search path for Lua programs",
+							"default": "${workspaceRoot}/?.lua"
+						},
+						"LUA_CPATH": {
+							"type": "string",
+							"description": "Search path for native libraries",
+							"default": "${workspaceRoot}/?.dll"	
 						}
 					}
 				}
