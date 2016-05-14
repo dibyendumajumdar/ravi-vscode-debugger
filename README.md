@@ -39,7 +39,7 @@ A prequisite on Mac OSX is an installation of Ravi. You need a NOJIT build that 
 
 Installation on Windows 10
 --------------------------
-You can install the Ravi Debug extension from VSCode Marketplace - search for 'Ravi Debug'. A pre-built binary is included in the installation - note that this does not have JIT enabled. 
+You can install the Ravi Debug extension from VSCode Marketplace - search for 'Ravi/Lua 5.3 Debugger'. A pre-built binary is included in the installation - note that this does not have JIT enabled. 
 
 Issues
 ------
