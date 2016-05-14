@@ -3,13 +3,12 @@ Ravi / Lua 5.3 Debug Adapter for VSCode
 
 The aim is to provide a debug adapter that allows Microsoft's Visual Studio Code to step through [Ravi](http://ravilang.org) or [Lua 5.3](http://www.lua.org) code.
 
-![Debugger in Action]
-(https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot0.png)
+![Debugger in Action](https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot0.png)
 
 Implementation Notes
 --------------------
 The approach is to create a standalone executable that can be invoked by VSCode. VSCode communicates 
-with the adapter via stdin/stdout. This means that Lua cannot use stdin/stdout - Lua output to 
+with the adapter via stdin/stdout. To prevent conflict with Lua, all Lua output to 
 stdout/stderr is captured and sent to the debugger front-end.
 
 Status
@@ -20,7 +19,7 @@ This is work in progress. The basic debugger is working with following features 
 * Step through code (stepin, stepout, next all behave as stepin)
 * Continue works, but pause doesn't. 
 * Set breakpoints at line/source level (but see issue below) 
-* Only local variables are shown in the Variables window right now; number of variables displayed is limited to 120.
+* Only local variables and variable arguments are shown in the Variables window right now; number of variables displayed is limited to 120.
 * Tables are expanded to one level only - expansion limited to 120 elements
 * Lua stdout and stderr are redirected to the debugger
 * The debugger can step into dynamically generated Lua code (but see issue below)
@@ -44,21 +43,18 @@ You can install the Ravi Debug extension from VSCode Marketplace - search for 'R
 Issues
 ------
 * The installation on OSX does not set the permissions on scripts correctly
-* The display of source code for dynamically generated source code is not working correctly
+* The display of source code for dynamically generated source code is not working correctly - this appears to be a bug in VSCode. I have logged [issue 6360](https://github.com/Microsoft/vscode/issues/6360). 
 * Breakpoints don't activate correctly if multiple source files are listed in the Breakpoints window - a workaround for now is to only have breakpoints for one file listed.
 
 Getting Started
 ---------------
 Once you have installed the extension, you will need to setup launch.json as shown in the steps below.
 
-![First Time]
-(https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot1.png)
+![First Launch](https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot1.png)
 
-![Select Ravi Debugger]
-(https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot2.png)
+![Select Ravi Debugger](https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot2.png)
 
-![Configure launch.json]
-(https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot3.png)
+![Configure launch.json](https://github.com/dibyendumajumdar/ravi-vscode-debugger/blob/master/images/screenshot3.png)
 
 See also
 --------
