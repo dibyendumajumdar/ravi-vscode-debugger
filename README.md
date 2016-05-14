@@ -45,6 +45,7 @@ Issues
 ------
 * The installation on OSX does not set the permissions on scripts correctly
 * The display of source code for dynamically generated source code is not working correctly
+* Breakpoints don't activate correctly if multiple source files are listed in the Breakpoints window - a workaround for now is to only have breakpoints for one file listed.
 
 Getting Started
 ---------------
