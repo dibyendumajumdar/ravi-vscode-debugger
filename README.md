@@ -32,13 +32,13 @@ Note: This is very early days and the debugger not yet ready for real use so try
 
 Installation on Mac OSX
 -----------------------
-Status: Not working as the vsce packaging does not set the permission on shell script correctly. 
+Status: Not working as the vsce packaging does not set the permission on shell script correctly. When you try to run the debugger you will see the error `spawn EACCES`. A workaround is to manually change the permission of the `ravidebug.sh` script located in the [extensions folder](https://code.visualstudio.com/docs/extensions/install-extension#_your-extensions-folder). 
 
-A prequisite on Mac OSX is an installation of Ravi. You need a NOJIT build that creates the 'ravidebug' executable. The 'ravidebug' executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it.
+A prequisite on Mac OSX is an installation of Ravi. You need a `NOJIT` build that creates the 'ravidebug' executable. The 'ravidebug' executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it.
 
 Installation on Windows 10
 --------------------------
-You can install the Ravi Debug extension from VSCode Marketplace - search for 'Ravi/Lua 5.3 Debugger'. A pre-built binary is included in the installation - note that this does not have JIT enabled. 
+You can install the Ravi Debug extension from VSCode Marketplace - search for 'Lua and Ravi 5.3 Debugger'. A pre-built binary is included in the installation - note that this does not have JIT enabled. 
 
 Issues
 ------
