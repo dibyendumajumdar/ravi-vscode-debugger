@@ -1,5 +1,5 @@
-Ravi / Lua 5.3 Debug Adapter for VSCode
-=======================================
+Lua and Ravi 5.3 Debug Adapter for VSCode
+=========================================
 
 The aim is to provide a debug adapter that allows Microsoft's Visual Studio Code to step through [Ravi](http://ravilang.org) or [Lua 5.3](http://www.lua.org) code.
 
@@ -32,7 +32,7 @@ Note: This is very early days and the debugger not yet ready for real use so try
 
 Installation on Mac OSX
 -----------------------
-Status: Not working as the vsce packaging does not set the permission on shell script correctly. Workaround is to manually fix the permissions.
+Status: Not working as the vsce packaging does not set the permission on shell script correctly. 
 
 A prequisite on Mac OSX is an installation of Ravi. You need a NOJIT build that creates the 'ravidebug' executable. The 'ravidebug' executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it.
 

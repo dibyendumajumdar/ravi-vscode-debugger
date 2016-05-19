@@ -1,7 +1,7 @@
 {
 	"name": "ravi-debug",
-	"displayName": "Ravi/Lua 5.3 Debugger",
-	"version": "0.0.8",
+	"displayName": "Lua and Ravi 5.3 Debugger",
+	"version": "0.0.9",
 	"publisher": "ravilang",
 	"description": "Visual Studio Code debugger extension for Ravi and Lua 5.3",
 	"categories": [
