@@ -16,10 +16,10 @@ Status
 This is work in progress. The basic debugger is working with following features and limitations.
 
 * Launch a Ravi/Lua 5.3 program and stop on entry (note that Lua 5.1 and 5.2 are not supported)
-* Step through code (stepin, stepout, next all behave as stepin)
+* Step through code
 * Continue works, but pause doesn't
 * Set breakpoints at line/source level (upto a max of 20 breakpoints)
-* Only local variables and variable arguments are shown in the Variables window right now; number of variables displayed is limited to 120
+* Local variables and variable arguments are shown in the Variables window right now; number of variables displayed is limited to 120
 * Tables are expanded to one level only - expansion limited to 120 elements
 * Lua stdout and stderr are redirected to the debugger
 * The debugger can step into dynamically generated Lua code
@@ -32,9 +32,7 @@ Note: This is very early days and the debugger not yet ready for real use so try
 
 Installation on Mac OSX
 -----------------------
-Status: Not working as the vsce packaging does not set the permission on shell script correctly. When you try to run the debugger you will see the error `spawn EACCES`. A workaround is to manually change the permission of the `ravidebug.sh` script located in the [extensions folder](https://code.visualstudio.com/docs/extensions/install-extension#_your-extensions-folder). 
-
-A prequisite on Mac OSX is an installation of Ravi. You need a `NOJIT` build that creates the `ravidebug` executable. The `ravidebug` executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it.
+A prequisite on Mac OSX is an installation of Ravi. You need a `NOJIT` build that creates the `ravidebug` executable. The `ravidebug` executable must be on the PATH so that the VSCode Ravi Debugger extension script can find it. Please update your Ravi installation to get the latest fixees.
 
 Installation on Windows 10
 --------------------------
@@ -42,7 +40,8 @@ You can install the Ravi Debug extension from VSCode Marketplace - search for 'L
 
 Issues
 ------
-* The installation on OSX does not set the permissions on scripts correctly
+* The 'pause' function does not work
+* Globals variables cannot be expanded 
 
 Getting Started
 ---------------
