@@ -1,7 +1,7 @@
 {
 	"name": "ravi-debug",
 	"displayName": "Lua and Ravi 5.3 Debugger",
-	"version": "0.0.14",
+	"version": "0.0.18",
 	"publisher": "ravilang",
 	"description": "Visual Studio Code debugger extension for Ravi and Lua 5.3",
 	"categories": [
@@ -36,10 +36,10 @@
 			"enableBreakpointsFor": { "languageIds": ["lua"] },
 			"program": "./bin/ravidebug.exe",
 			"osx": {
-				"program": "/bin/osx/ravidebug.sh"
+				"program": "/bin/osx/ravidebug"
 			},
 			"linux": {
-				"program": "/bin/linux/ravidebug.sh"
+				"program": "/bin/linux/ravidebug"
 			},
 			"initialConfigurations":[
 				{
