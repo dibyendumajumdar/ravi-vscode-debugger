@@ -12,8 +12,8 @@ This is work in progress. The basic debugger is working with following features 
 * Launch a Ravi/Lua 5.3 script and stop on entry 
 * Step through code
 * Set breakpoints at line/source level (upto a max of 20 breakpoints)
-* Local variables and variable arguments are shown in the Variables window; number of variables displayed is limited to 120
-* Tables are expanded to one level only - expansion limited to 120 elements
+* Local variables and variable arguments are shown in the Variables window; number of variables displayed is limited to 250
+* Tables are expanded to one level only - expansion limited to 250 elements
 * Lua stdout and stderr are redirected to the debugger
 * The debugger can step into dynamically generated Lua code
 * Has been tested briefly on Windows 10, Ubuntu and OSX so far
@@ -28,13 +28,12 @@ You can install the Ravi Debug extension from VSCode Marketplace - search for 'L
 Issues and Limitations
 ----------------------
 * The 'pause' function does not work, i.e. you cannot pause a running script
-* Globals variables cannot be expanded as yet
-* In all cases the number of variables or table entries displayed is truncated to 120 items
+* In all cases the number of variables or table entries displayed is truncated to 250 items
 * The stack trace is truncated to 50 items
 * Only upto 20 breakpoints can be set
 * You cannot set a breakpoint against a dynamically generated Lua function 
 * You may not be able to debug Lua 5.0, 5.1 or 5.2 scripts - only 5.3 is tested and officially supported
-* Table variables can only be expanded to 1 level (global tables cannot be expanded yet)
+* Table variables can only be expanded to 1 level
 * You cannot attach to a script already running somewhere
 * When the debugger runs the Lua Hook is disabled - so the running script is not allowed to modify the hook
 * The type and value display does not yet recognise Ravi types or Lua number subtypes
