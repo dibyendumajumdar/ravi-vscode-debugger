@@ -23,7 +23,9 @@ Note: This is very early days so please expect bugs!
 
 Installation
 ------------
-You can install the Ravi Debug extension from VSCode Marketplace - search for 'Lua and Ravi 5.3 Debugger'. Pre-built 64-bit binaries for Windows 10, OS X El Capitan, and Ubuntu 16.04 are included in the installation - note that these do not have JIT enabled.
+You can install the Ravi Debug extension from VSCode Marketplace - search for 'Lua and Ravi 5.3 Debugger'. 
+Pre-built 64-bit binaries for Windows 10, OS X El Capitan, and Ubuntu 16.04 are included in the installation - 
+note that these do not have JIT enabled.
 
 Issues and Limitations
 ----------------------
@@ -36,11 +38,10 @@ Issues and Limitations
 * Table variables can only be expanded to 1 level
 * You cannot attach to a script already running somewhere
 * When the debugger runs the Lua Hook is disabled - so the running script is not allowed to modify the hook
-* The type and value display does not yet recognise Ravi types or Lua number subtypes
 * Evaluating expressions is not supported
 * You cannot modify the variables displayed - the values are readonly
 * If you amend/edit the script being debugged it will not be recognised in the debug session so you will need to start a new session to recognise changes
-* Using LUA_PATH and LUA_CPATH has been tested briefly
+* Using `LUA_PATH` and `LUA_CPATH` has been tested briefly
 
 Getting Started
 ---------------
