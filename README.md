@@ -13,7 +13,7 @@ This is work in progress. The basic debugger is working with following features 
 * Step through code
 * Set breakpoints at line/source level (upto a max of 20 breakpoints)
 * Local variables and variable arguments are shown in the Variables window; number of variables displayed is limited to 250
-* Tables are expanded to one level only - expansion limited to 250 elements
+* Tables are expanded to first few levels only - expansion limited to 250 elements
 * Lua stdout and stderr are redirected to the debugger
 * The debugger can step into dynamically generated Lua code
 * Has been tested briefly on Windows 10, Ubuntu and OSX so far
@@ -35,13 +35,20 @@ Issues and Limitations
 * Only upto 20 breakpoints can be set
 * You cannot set a breakpoint against a dynamically generated Lua function 
 * You may not be able to debug Lua 5.0, 5.1 or 5.2 scripts - only 5.3 is tested and officially supported
-* Table variables can only be expanded to 1 level
+* Table variables can only be expanded to the first few levels
 * You cannot attach to a script already running somewhere
 * When the debugger runs the Lua Hook is disabled - so the running script is not allowed to modify the hook
 * Evaluating expressions is not supported
 * You cannot modify the variables displayed - the values are readonly
 * If you amend/edit the script being debugged it will not be recognised in the debug session so you will need to start a new session to recognise changes
 * Using `LUA_PATH` and `LUA_CPATH` has been tested briefly
+
+Recent changes
+--------------
+* Oct 2016: Added support for expanding tables to more than 1 level but still limited to first 4 or 5 levels
+* Oct 2016: Display of variable types - if __name metamethod is defined for user defined types then this is used
+* Oct 2016: Display of variable contents - if __tostring metamethod is defined for user defined types then this is used
+* Oct 2016: Variable type names are passed to VSCode so that these get displayed by the UI
 
 Getting Started
 ---------------
