@@ -45,6 +45,8 @@ Issues and Limitations
 
 Recent changes
 --------------
+* Feb 2017: Since VSCode 1.8 there is a bug in VSCode that messes up output to stdout - added a workaround for this bug. Details of bug are at [issue #17526](https://github.com/Microsoft/vscode/issues/17526)
+* Feb 2017: The debugger is now synced with Lua 5.3.4
 * Oct 2016: Added support for expanding tables to more than 1 level but still limited to first 4 or 5 levels
 * Oct 2016: Display of variable types - if __name metamethod is defined for user defined types then this is used
 * Oct 2016: Display of variable contents - if __tostring metamethod is defined for user defined types then this is used
