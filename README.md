@@ -24,7 +24,7 @@ Note: This is very early days so please expect bugs!
 Installation
 ------------
 You can install the Ravi Debug extension from VSCode Marketplace - search for 'Lua and Ravi 5.3 Debugger'. 
-Pre-built 64-bit binaries for Windows 10, OS X El Capitan, and Ubuntu 16.04 are included in the installation - 
+Pre-built 64-bit binaries for Windows 10, OS X Mojave, and Ubuntu 18.04 are included in the installation - 
 note that these do not have JIT enabled.
 
 Issues and Limitations
@@ -45,6 +45,7 @@ Issues and Limitations
 
 Recent changes
 --------------
+* Dec 2019: Updated Ravi to latest version, added support for arguments to launch script
 * Feb 2017: Since VSCode 1.8 there is a bug in VSCode that messes up output to stdout - added a workaround for this bug. Details of bug are at [issue #17526](https://github.com/Microsoft/vscode/issues/17526)
 * Feb 2017: The debugger is now synced with Lua 5.3.4
 * Oct 2016: Added support for expanding tables to more than 1 level but still limited to first 4 or 5 levels

@@ -1,7 +1,7 @@
 {
 	"name": "ravi-debug",
 	"displayName": "Lua and Ravi 5.3 Debugger",
-	"version": "0.0.23",
+	"version": "0.0.26",
 	"publisher": "ravilang",
 	"description": "Visual Studio Code debugger extension for Ravi and Lua 5.3",
 	"categories": [
@@ -12,13 +12,10 @@
 	},
 	"license": "MIT",
 	"private": true,
-	"scripts": {
-	},
+	"scripts": {},
 	"engines": {
 		"vscode": "^1.0.0",
 		"node": "^4.1.1"
-	},
-	"dependencies": {
 	},
 	"repository": {
 		"type": "git",
@@ -27,65 +24,70 @@
 	"bugs": {
 		"url": "https://github.com/dibyendumajumdar/ravi-vscode-debugger/issues"
 	},
-	"devDependencies": {
-	},
 	"contributes": {
-		"debuggers": [{
-			"type": "lua",
-			"label": "Ravi Debugger",
-			"enableBreakpointsFor": { "languageIds": ["lua"] },
-			"program": "./bin/ravidebug.exe",
-			"osx": {
-				"program": "/bin/osx/ravidebug"
-			},
-			"linux": {
-				"program": "/bin/linux/ravidebug"
-			},
-			"initialConfigurations":[
-				{
-					"name": "Ravi Debugger",
-					"type": "lua",
-					"request": "launch",
-					"program": "${workspaceRoot}/main.lua",
-					"stopOnEntry": true,
-					"cwd": "${workspaceRoot}",
-					"LUA_PATH": "${workspaceRoot}/?.lua",
-					"LUA_CPATH": "${workspaceRoot}/?.dll"
-				}
-			],
-			"configurationAttributes": {
-				"launch": {
-					"required": ["program"],
-					"properties": {
-						"program": {
-							"type": "string",
-							"description": "Lua 5.3 or Ravi program to debug - set this to the path of the script",
-							"default": "main.lua"
-						},
-						"cwd": {
-							"type": "string",
-							"description": "Working directory at program startup",
-							"default": "${workspaceRoot}"
-						},
-						"stopOnEntry": {
-							"type": "boolean",
-							"description": "Automatically stop after launch.",
-							"default": true
-						},
-						"LUA_PATH": {
-							"type": "string",
-							"description": "Search path for Lua programs",
-							"default": "${workspaceRoot}/?.lua"
-						},
-						"LUA_CPATH": {
-							"type": "string",
-							"description": "Search path for native libraries",
-							"default": "${workspaceRoot}/?.dll"	
+		"debuggers": [
+			{
+				"type": "lua",
+				"label": "Ravi Debugger",
+				"enableBreakpointsFor": {
+					"languageIds": [
+						"lua"
+					]
+				},
+				"program": "./bin/ravidebug.exe",
+				"osx": {
+					"program": "./bin/osx/ravidebug"
+				},
+				"linux": {
+					"program": "./bin/linux/ravidebug"
+				},
+				"initialConfigurations": [
+					{
+						"name": "Ravi Debugger",
+						"type": "lua",
+						"request": "launch",
+						"program": "${workspaceRoot}/main.lua",
+						"stopOnEntry": true,
+						"cwd": "${workspaceRoot}",
+						"LUA_PATH": "${workspaceRoot}/?.lua",
+						"LUA_CPATH": "${workspaceRoot}/?.dll"
+					}
+				],
+				"configurationAttributes": {
+					"launch": {
+						"required": [
+							"program"
+						],
+						"properties": {
+							"program": {
+								"type": "string",
+								"description": "Lua 5.3 or Ravi program to debug - set this to the path of the script",
+								"default": "main.lua"
+							},
+							"cwd": {
+								"type": "string",
+								"description": "Working directory at program startup",
+								"default": "${workspaceRoot}"
+							},
+							"stopOnEntry": {
+								"type": "boolean",
+								"description": "Automatically stop after launch.",
+								"default": true
+							},
+							"LUA_PATH": {
+								"type": "string",
+								"description": "Search path for Lua programs",
+								"default": "${workspaceRoot}/?.lua"
+							},
+							"LUA_CPATH": {
+								"type": "string",
+								"description": "Search path for native libraries",
+								"default": "${workspaceRoot}/?.dll"
+							}
 						}
 					}
 				}
 			}
-		}]
+		]
 	}
 }
-
