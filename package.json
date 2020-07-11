@@ -1,7 +1,7 @@
 {
 	"name": "ravi-debug",
 	"displayName": "Lua and Ravi 5.3 Debugger",
-	"version": "0.0.26",
+	"version": "0.0.28",
 	"publisher": "ravilang",
 	"description": "Visual Studio Code debugger extension for Ravi and Lua 5.3",
 	"categories": [
@@ -46,7 +46,7 @@
 						"name": "Ravi Debugger",
 						"type": "lua",
 						"request": "launch",
-						"program": "${workspaceRoot}/main.lua",
+						"program": "${workspaceRoot}/main.lua arg1 arg2",
 						"stopOnEntry": true,
 						"cwd": "${workspaceRoot}",
 						"LUA_PATH": "${workspaceRoot}/?.lua",
@@ -62,7 +62,7 @@
 							"program": {
 								"type": "string",
 								"description": "Lua 5.3 or Ravi program to debug - set this to the path of the script",
-								"default": "main.lua"
+								"default": "main.lua arg1 arg2"
 							},
 							"cwd": {
 								"type": "string",
