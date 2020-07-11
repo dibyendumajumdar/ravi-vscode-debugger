@@ -45,6 +45,7 @@ Issues and Limitations
 
 Recent changes
 --------------
+* Jul 2020: Updated Ravi to 1.0 Beta4a
 * Dec 2019: Updated Ravi to latest version, added support for arguments to launch script
 * Feb 2017: Since VSCode 1.8 there is a bug in VSCode that messes up output to stdout - added a workaround for this bug. Details of bug are at [issue #17526](https://github.com/Microsoft/vscode/issues/17526)
 * Feb 2017: The debugger is now synced with Lua 5.3.4
