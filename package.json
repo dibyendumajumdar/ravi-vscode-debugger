@@ -14,7 +14,7 @@
 	"private": true,
 	"scripts": {},
 	"engines": {
-		"vscode": "^1.0.0",
+		"vscode": "^1.42.0",
 		"node": "^4.1.1"
 	},
 	"repository": {
@@ -25,6 +25,7 @@
 		"url": "https://github.com/dibyendumajumdar/ravi-vscode-debugger/issues"
 	},
 	"contributes": {
+		"breakpoints": [{ "language": "lua" }],
 		"debuggers": [
 			{
 				"type": "lua",
@@ -34,7 +35,9 @@
 						"lua"
 					]
 				},
-				"program": "./bin/ravidebug.exe",
+				"windows": {
+					"program": "./bin/ravidebug.exe"
+				},
 				"osx": {
 					"program": "./bin/osx/ravidebug"
 				},
