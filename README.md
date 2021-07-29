@@ -16,10 +16,11 @@ This is work in progress. The basic debugger is working with following features 
 * Tables are expanded to first few levels only - expansion limited to 250 elements
 * Lua stdout and stderr are redirected to the debugger
 * The debugger can step into dynamically generated Lua code
-* Has been tested briefly on Windows 10, Ubuntu and OSX so far
+* Support limited to x86-64 Windows 10, Ubuntu and OSX platforms
+* Unlike other Lua debuggers this implementation uses a custom Ravi VM, with extensions to support debugging
 * Various limitations - see list below
 
-Note: This is very early days so please expect bugs!
+Note: This is work in progress so please expect bugs!
 
 Installation
 ------------
@@ -41,10 +42,11 @@ Issues and Limitations
 * Evaluating expressions is not supported
 * You cannot modify the variables displayed - the values are readonly
 * If you amend/edit the script being debugged it will not be recognised in the debug session so you will need to start a new session to recognise changes
-* Using `LUA_PATH` and `LUA_CPATH` has been tested briefly
+* Using `LUA_PATH` and `LUA_CPATH` has been tested briefly. When using `LUA_CPATH` you need to ensure that the native shared libraries are available on the system path; otherwise library dependencies can fail to be loaded.
 
 Recent changes
 --------------
+* Jul 2021: Updated to fix breaking change in VS Code Debug extension for breakpoints in 1.53 (breaking change in 1.42). Also revised the mechanism for supplying arguments to the script.
 * Jul 2020: Updated Ravi to 1.0 Beta4a
 * Dec 2019: Updated Ravi to latest version, added support for arguments to launch script
 * Feb 2017: Since VSCode 1.8 there is a bug in VSCode that messes up output to stdout - added a workaround for this bug. Details of bug are at [issue #17526](https://github.com/Microsoft/vscode/issues/17526)

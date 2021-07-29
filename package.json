@@ -1,7 +1,7 @@
 {
 	"name": "ravi-debug",
 	"displayName": "Lua and Ravi 5.3 Debugger",
-	"version": "0.0.28",
+	"version": "1.0.0",
 	"publisher": "ravilang",
 	"description": "Visual Studio Code debugger extension for Ravi and Lua 5.3",
 	"categories": [
@@ -25,16 +25,15 @@
 		"url": "https://github.com/dibyendumajumdar/ravi-vscode-debugger/issues"
 	},
 	"contributes": {
-		"breakpoints": [{ "language": "lua" }],
+		"breakpoints": [
+			{
+				"language": "lua"
+			}
+		],
 		"debuggers": [
 			{
 				"type": "lua",
 				"label": "Ravi Debugger",
-				"enableBreakpointsFor": {
-					"languageIds": [
-						"lua"
-					]
-				},
 				"windows": {
 					"program": "./bin/ravidebug.exe"
 				},
@@ -49,11 +48,12 @@
 						"name": "Ravi Debugger",
 						"type": "lua",
 						"request": "launch",
-						"program": "${workspaceRoot}/main.lua arg1 arg2",
+						"program": "${workspaceRoot}/main.lua",
 						"stopOnEntry": true,
 						"cwd": "${workspaceRoot}",
 						"LUA_PATH": "${workspaceRoot}/?.lua",
-						"LUA_CPATH": "${workspaceRoot}/?.dll"
+						"LUA_CPATH": "${workspaceRoot}/?.dll",
+						"args": []
 					}
 				],
 				"configurationAttributes": {
@@ -65,7 +65,7 @@
 							"program": {
 								"type": "string",
 								"description": "Lua 5.3 or Ravi program to debug - set this to the path of the script",
-								"default": "main.lua arg1 arg2"
+								"default": "main.lua"
 							},
 							"cwd": {
 								"type": "string",
@@ -84,8 +84,13 @@
 							},
 							"LUA_CPATH": {
 								"type": "string",
-								"description": "Search path for native libraries",
+								"description": "Search path for native libraries; you may also need to set PATH before starting VS Code for library dependencies",
 								"default": "${workspaceRoot}/?.dll"
+							},
+							"args": {
+								"type": "array",
+								"description": "Command line arguments (maximum 10 args, each 256 chars max)",
+								"default": []
 							}
 						}
 					}
