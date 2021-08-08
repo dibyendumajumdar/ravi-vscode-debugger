@@ -25,7 +25,7 @@ Note: This is work in progress so please expect bugs!
 Installation
 ------------
 You can install the Ravi Debug extension from VSCode Marketplace - search for 'Lua and Ravi 5.3 Debugger'. 
-Pre-built 64-bit binaries for Windows 10, OS X Mojave, and Ubuntu 18.04 are included in the installation - 
+Pre-built X86 64-bit binaries for Windows 10, OS X Mojave, and Ubuntu 14.04 are included in the installation - 
 note that these do not have JIT enabled.
 
 Issues and Limitations
